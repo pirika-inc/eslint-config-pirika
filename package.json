@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-pirika",
+  "version": "0.0.1",
+  "description": "eslint / prettier config for Production PIRIKA projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirika-inc/eslint-config-pirika.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier"
+  ],
+  "author": "pirika-inc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pirika-inc/eslint-config-pirika/issues"
+  },
+  "homepage": "https://github.com/pirika-inc/eslint-config-pirika#readme"
+}
