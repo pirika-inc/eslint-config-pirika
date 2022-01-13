@@ -19,7 +19,8 @@ $ npm install -D eslint-config-pirika
 ```js
 module.exports = {
   extends: [
-    "eslint-config-pirika"
+    "eslint-config-pirika/react" // Reactプロジェクトの場合
+    //"eslint-config-pirika" それ以外の場合
   ],
   root: true,
 };

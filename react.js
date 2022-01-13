@@ -1,5 +1,6 @@
 module.exports = {
   env: {
+    browser: true,
     es2021: true,
   },
   extends: [
@@ -14,15 +15,25 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: 12,
     project: "./tsconfig.eslint.json",
     sourceType: "module",
     tsConfigRootDir: __dirname,
   },
-  plugins: ["@typescript-eslint", "import", "prefer-arrow"],
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "jsx-a11y",
+    "prefer-arrow",
+    "react",
+  ],
   rules: {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/explicit-member-accessibility": ["error"],
     "lines-between-class-members": [
       "error",
       "always",
@@ -47,6 +58,13 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        extensions: [".jsx", ".tsx"],
+      },
+    ],
+    "react/react-in-jsx-scope": "off",
     "prefer-arrow/prefer-arrow-functions": [
       "error",
       {
@@ -55,7 +73,26 @@ module.exports = {
         classPropertiesAllowed: false,
       },
     ],
+    "max-len": [
+      "error",
+      {
+        code: 120,
+        ignorePattern: "^import .*$", // import 文が長いのは許容
+        ignoreComments: true, // コメントが長いのは許容
+        ignoreStrings: true, // 文字列が長いのは許容
+        ignoreTemplateLiterals: true, // テンプレートリテラルが長いのは許容
+      },
+    ],
   },
-  overrides: [],
-  root: true,
+  overrides: [
+    {
+      files: ["**/*.tsx"],
+      rules: {
+        // tsx では TypeScript が型検証するので PropTypes 書かなくても良い
+        "react/prop-types": "off",
+        // 外部にライブラリとして提供するわけではないのでデフォルト値を指定しない
+        "react/require-default-props": "off",
+      },
+    },
+  ],
 };
