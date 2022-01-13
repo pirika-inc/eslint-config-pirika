@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const { exec } = require('child_process');
+
+exec(
+  "npm install --save-dev eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks",
+  (error, stdout, stderr) => {
+    if (error) {
+      console.error(`[ERROR] ${error}`);
+      return;
+    }
+    console.log("Install completed.");
+  }
+);

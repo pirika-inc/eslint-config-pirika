@@ -1,0 +1,37 @@
+{
+  "name": "eslint-config-pirika",
+  "version": "1.0.0",
+  "description": "eslint / prettier config for Pirika projects",
+  "main": "index.js",
+  "bin": {
+    "eslint-config-pirika-install-deps": "bin/install-deps",
+    "eslint-config-pirika-install-deps-react": "bin/install-deps-react"
+  },
+  "peerDependencies": {
+    "eslint": "^8.6.0",
+    "prettier": "^2.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3"
+  },
+  "files": [
+    "index.js",
+    "react.js",
+    "prettier-config.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirika-inc/eslint-config-pirika.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier"
+  ],
+  "author": "Pirika, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pirika-inc/eslint-config-pirika/issues"
+  },
+  "homepage": "https://github.com/pirika-inc/eslint-config-pirika#readme"
+}
