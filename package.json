@@ -3,12 +3,21 @@
   "version": "0.0.1",
   "description": "eslint / prettier config for Production PIRIKA projects",
   "main": "index.js",
+  "bin": {
+    "eslint-config-pirika-install-deps": "bin/install-deps",
+    "eslint-config-pirika-install-deps-react": "bin/install-deps-react"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
     "eslint": ">= 8.6.0",
-    "prettier": "^2.5.1"
+    "prettier": ">= 2.5.1",
+    "@typescript-eslint/eslint-plugin": ">= 5.9.1",
+    "@typescript-eslint/parser": ">= 5.9.1",
+    "eslint-config-prettier": ">= 8.3.0",
+    "eslint-config-import": ">= 0.13.0",
+    "eslint-plugin-prefer-arrow": ">= 1.2.3"
   },
   "files": [
     "index.js",
