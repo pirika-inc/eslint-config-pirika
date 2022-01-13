@@ -72,16 +72,6 @@ module.exports = {
         classPropertiesAllowed: false,
       },
     ],
-    "max-len": [
-      "error",
-      {
-        code: 120,
-        ignorePattern: "^import .*$", // import 文が長いのは許容
-        ignoreComments: true, // コメントが長いのは許容
-        ignoreStrings: true, // 文字列が長いのは許容
-        ignoreTemplateLiterals: true, // テンプレートリテラルが長いのは許容
-      },
-    ],
   },
   overrides: [
     {
