@@ -72,6 +72,13 @@ module.exports = {
         classPropertiesAllowed: false,
       },
     ],
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: ["function-expression", "arrow-function"],
+        unnamedComponents: ["function-expression", "arrow-function"],
+      },
+    ],
   },
   overrides: [
     {

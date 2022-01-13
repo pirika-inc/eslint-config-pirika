@@ -1,14 +1,11 @@
 {
   "name": "eslint-config-pirika",
-  "version": "0.0.1",
-  "description": "eslint / prettier config for Production PIRIKA projects",
+  "version": "1.0.0",
+  "description": "eslint / prettier config for Pirika projects",
   "main": "index.js",
   "bin": {
     "eslint-config-pirika-install-deps": "bin/install-deps",
     "eslint-config-pirika-install-deps-react": "bin/install-deps-react"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
     "eslint": "^8.6.0",
@@ -31,7 +28,7 @@
     "eslint",
     "prettier"
   ],
-  "author": "pirika-inc",
+  "author": "Pirika, Inc.",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pirika-inc/eslint-config-pirika/issues"
