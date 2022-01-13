@@ -47,7 +47,6 @@ module.exports = {
         allowAsStatement: true,
       },
     ],
-    semi: ["error", "always"],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -73,14 +72,11 @@ module.exports = {
         classPropertiesAllowed: false,
       },
     ],
-    "max-len": [
+    "react/function-component-definition": [
       "error",
       {
-        code: 120,
-        ignorePattern: "^import .*$", // import 文が長いのは許容
-        ignoreComments: true, // コメントが長いのは許容
-        ignoreStrings: true, // 文字列が長いのは許容
-        ignoreTemplateLiterals: true, // テンプレートリテラルが長いのは許容
+        namedComponents: ["function-expression", "arrow-function"],
+        unnamedComponents: ["function-expression", "arrow-function"],
       },
     ],
   },

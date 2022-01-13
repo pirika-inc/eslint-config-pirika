@@ -36,7 +36,6 @@ module.exports = {
         allowAsStatement: true,
       },
     ],
-    semi: ["error", "always"],
     "import/extensions": [
       "error",
       "ignorePackages",
